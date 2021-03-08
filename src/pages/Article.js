@@ -133,8 +133,8 @@ const Article = () => {
                  <hr className="mt-7"/>
 
                 {/* User Publisher */}
-                <div className="flex mt-7">
-                    <div className="w-24">
+                <div className="lg:flex mt-7">
+                    <div className="w-20 m-auto lg:w-24">
                         <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"  className="object-cover rounded-full" alt="screen1"/>
                     </div>
                     <div className="ml-6">
