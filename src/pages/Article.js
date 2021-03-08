@@ -5,7 +5,22 @@ const Article = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     });
-
+    const content = {
+        "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "subtitle":"Marem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore.",
+        "article_date":"June 2016",
+        "pargraph1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident",
+        "paragraph2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident",
+        "paragraph3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident",
+        "image":"https://source.unsplash.com/random",
+        "caption_image":"Donec non nunc vehicula Lorem ipsum dolor sit amet",
+        "quote":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        "author":{
+            "name":"John Broke",
+            "position":"Public Relation WWF",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ."
+        }
+    }
     return (
         <div className="min-h-screen">
             {/* Header */}
@@ -17,11 +32,11 @@ const Article = () => {
                 
                 {/* Title */}
                 <p className="text-4xl pt-7 font-bold"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    {content.title}
                 </p>
 
                 {/* Date */}
-                <p className="pt-2"><span className="text-gray-400 font-normal text-xs"> John Broke / 20 June 2016 / WWF</span></p>
+                <p className="pt-2"><span className="text-gray-400 font-normal text-xs"> {content.author.name} / {content.article_date} / WWF</span></p>
 
                 {/* Button Box */}
                 <div className="flex items-center mt-2">
@@ -41,7 +56,7 @@ const Article = () => {
 
                 {/* Sub Title */}
                 <p className="text-2xl mt-7 font-semibold"> 
-                Marem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore.
+                    {content.subtitle}
                 </p>
 
                 {/* Heading */}
@@ -50,33 +65,32 @@ const Article = () => {
                 </p>
 
                 {/* Paragraph 1 */}
-
                 <p className="text-sm mt-2 text-gray-500"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident
+                    {content.pargraph1}
                 </p>
 
                 {/* image */}
                 <div className="mt-10">
-                    <img src="https://source.unsplash.com/random"  className="object-cover h-96 w-full" alt="screen1"/>
+                    <img src={content.image}  className="object-cover h-96 w-full" alt="screen1"/>
                 </div>
                 {/* Caption Image */}
-                <p><span className="text-gray-500 font-normal text-xs">Donec non nunc vehicula Lorem ipsum dolor sit amet</span></p>
+                <p><span className="text-gray-500 font-normal text-xs">{content.caption_image}</span></p>
 
-                 {/* Paragraph 2 */}
+                {/* Paragraph 2 */}
 
-                 <p className="text-sm mt-10 text-gray-500"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident
+                <p className="text-sm mt-10 text-gray-500"> 
+                    {content.paragraph2}
                 </p>
 
                 {/* Quotes */}
                 <hr className="mt-10"/>
-                <p className="mt-5 text-2xl text-blue-400 italic text-center mx-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                <p className="mt-5 text-2xl text-blue-400 italic text-center mx-10">{content.quote}</p>
                 <hr className="mt-5"/>
 
                 {/* Paragraph 3 */}
 
                 <p className="text-sm mt-10 text-gray-500"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident
+                    {content.paragraph3}
                 </p>
 
                 {/* Share Icon */}
@@ -100,10 +114,10 @@ const Article = () => {
                         <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"  className="object-cover rounded-full" alt="screen1"/>
                     </div>
                     <div className="ml-6">
-                        <p className="text-gray-600 font-bold text-sm">John Username</p>
-                        <p className="text-gray-600 font-light text-xs">Public Relation WWF</p>
+                        <p className="text-gray-600 font-bold text-sm">{content.author.name}</p>
+                        <p className="text-gray-600 font-light text-xs">{content.author.position}</p>
                         <p className="text-gray-600 font-light text-xs mt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .
+                            {content.author.description}
                         </p>
                     </div>
                 </div>
