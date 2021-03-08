@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
 
 const Article = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     return (
         <div className="min-h-screen">
             {/* Header */}
-            <div className="flex p-4 border-gray-200 border-b-2">
+            <div className="lg:flex p-4 border-gray-200 border-b-2">
                 {/* Logo */}
                 <div className="flex-1 text-center">
                     <Link to="/">
-                        <img className="object-contain w-40 ml-40" src="assets/logo.png" alt="logo"/>
+                        <img className="object-contain w-40 lg:ml-40" src="assets/logo.png" alt="logo"/>
                     </Link>
                 </div>
                 {/* Menu */}
@@ -28,7 +33,7 @@ const Article = () => {
                 </div>
             </div>
             {/* Content */}
-            <div className="pt-5 pb-10 mx-80">
+            <div className="pt-5 pb-10 mx-10 lg:mx-80">
                 {/* Breadcumb */}
                 <p> <span className="text-gray-700 font-bold text-xs">Blog</span><span className="text-gray-500 font-normal text-xs"> / Lorem ipsum dolor sit amet</span></p>
                 
@@ -126,7 +131,7 @@ const Article = () => {
                 </div>
             </div>
             {/* Footer */}
-            <div className="bg-gray-300 p-20 grid grid-cols-5">
+            <div className="bg-gray-300 p-7 lg:p-20 lg:grid lg:grid-cols-5">
                     <div className="mx-6">
                         <p className="text-gray-700 font-bold text-xs mb-3">ABOUT</p>
                         <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
@@ -161,7 +166,7 @@ const Article = () => {
                         <input type="text" name="message" className="p-2" placeholder="Message" style={{width:"100%",borderBottom:"1px solid #CCCCCC"}}/>
                     </div>
                     <div>
-                        <input type="text" name="message" className="p-2" placeholder="Your email address" style={{width:"80%"}}/><button className=" text-white" style={{backgroundColor:"black",width:"92px",height:"40px"}}>SUBMIT</button>
+                        <input type="text" name="message" className="p-2" placeholder="Your email address" style={{width:"80%"}}/><button className=" text-white text-xs lg:text-sm p-3" style={{backgroundColor:"black",width:"20%"}}>SUBMIT</button>
                     </div>
                     </div>
             </div>

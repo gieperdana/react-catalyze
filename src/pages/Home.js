@@ -7,23 +7,23 @@ const Home = () => {
     return (
         // All Pages
         <div className="min-h-screen">
-            {/* Header */}
-            <div className="flex p-4 border-gray-200 border-b-2">
+           {/* Header */}
+           <div className="lg:flex p-4 border-gray-200 border-b-2">
                 {/* Logo */}
                 <div className="flex-1 text-center">
                     <Link to="/">
-                        <img className="object-contain w-40 ml-40" src="assets/logo.png" alt="logo"/>
+                        <img className="object-contain w-40 lg:ml-40" src="assets/logo.png" alt="logo"/>
                     </Link>
                 </div>
                 {/* Menu */}
                 <div className="flex-1 text-center mt-2">
-                    <a href="#"><span className="mx-5 text-yellow-600">Home</span></a>
-                    <a href="#"><span className="mx-5 text-gray-600">About</span></a>
-                    <a href="#"><span className="mx-5 text-gray-600">Works</span></a>
-                    <a href="#"><span className="mx-5 text-gray-600">Services</span></a>
+                    <Link to="/"><span className="mx-5 text-yellow-600">Home</span></Link>
+                    <Link to="/"><span className="mx-5 text-gray-600">About</span></Link>
+                    <Link to="/"><span className="mx-5 text-gray-600">Works</span></Link>
+                    <Link to="/"><span className="mx-5 text-gray-600">Services</span></Link>
                 </div>
                 {/* Social */}
-                <div className="flex-1 text-center mt-2 flex">
+                <div className="invisible lg:visible flex-1 text-center lg:mt-2 flex">
                     <a href="#"><span><img src="assets/facebook-icon.svg" className="w-6 flex-1 mx-2" alt="facebook"/></span></a>
                     <a href="#"><span><img src="assets/twitter-icon.svg" className="w-6 flex-1 mx-2" alt="twitter"/></span></a>
                     <a href="#"><span><img src="assets/google-icon.jpg" className="w-6 flex-1 mx-2" alt="google"/></span></a>
@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Menu Bar */}
-            <div className="p-2 text-center mt-2 mb-2">
+            <div className="invisible lg:visible lg:p-2 text-center lg:mt-2 lg:mb-2">
                 {/* Menu List */}
                 <a href="#"><span className="mx-5 text-yellow-600">RSPO</span></a>
                 <a href="#"><span className="mx-5 text-gray-600">WWF International</span></a>
@@ -40,9 +40,9 @@ const Home = () => {
                 <a href="#"><span className="mx-5 text-gray-600">The Coral Triangle</span></a>
             </div>
             {/* Screen  */}
-            <div className="bg-white flex" style={{height:'500px'}}>
+            <div className="bg-white lg:flex" style={{height:'500px'}}>
                 {/* Screen 1 */}
-                <div className="bg-gray-600 w-3/5 h-full border-r-2 flex items-end" style={{backgroundImage:"url('https://i.picsum.photos/id/1073/536/354.jpg?hmac=2TFoFh7Q5tt1soIJWcMPmAzO8253cMKXCXq9M8z202o')"}}>
+                <div className="bg-gray-600 md:w-full lg:w-3/5 h-full lg:border-r-2 flex items-end" style={{backgroundImage:"url('https://i.picsum.photos/id/1073/536/354.jpg?hmac=2TFoFh7Q5tt1soIJWcMPmAzO8253cMKXCXq9M8z202o')"}}>
                     {/* <img src="https://source.unsplash.com/random"  className="object-cover h-full w-full" alt="screen1"/> */}
                     <div className="p-6">
                         <p className="text-2xl font-semibold text-white">Munc ullamcopper metus at dui iuctus, non cursus odio scelerscue</p>
@@ -53,16 +53,16 @@ const Home = () => {
                     </div>
                 </div>
                 {/* Screen Container */}
-                <div className="w-2/5">
+                <div className="invisible lg:visible md:w-full lg:w-2/5">
                     {/* Screen 2 */}
-                    <div className="h-1/2 bg-gray-600 flex items-end" style={{backgroundImage:"url('https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0')"}}>
+                    <div className="lg:h-1/2 bg-gray-600 flex items-end" style={{backgroundImage:"url('https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0')"}}>
                         {/* <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/> */}
                         <div className="p-4">
                             <p className="text-lg font-semibold text-white">Munc ullamcopper metus at dui iuctus, non cursus odio scelerscue</p>
                         </div>
                     </div>
                     {/* Screen 3 */}
-                    <div className="h-1/2 bg-gray-600 border-t-2 flex items-end" style={{backgroundImage:"url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60')"}}>
+                    <div className="lg:h-1/2 bg-gray-600 border-t-2 flex items-end" style={{backgroundImage:"url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60')"}}>
                         {/* <img src="https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"  className="object-cover h-full w-full" alt="screen3"/> */}
                         <div className="p-4">
                         <p className="text-lg font-semibold text-white">Munc ullamcopper metus at dui iuctus, non cursus odio scelerscue</p>
@@ -73,15 +73,15 @@ const Home = () => {
             {/* Content Container */}
             <div className="flex pt-10" style={{backgroundColor:'#F5F5F5'}}>
                 {/* Content */}
-                <div className="w-32">
+                <div className="invisible lg:visible w-0 lg:w-32">
                     <a href="#">
                         <img src="assets/arrow_left.png"  className="w-8 h-16 mx-8 mt-64" alt="arrow_left"/>
                     </a>
                 </div>
                 <div className="w-full">
-                <div className="grid grid-cols-3">
+                <div className="lg:grid lg:grid-cols-3">
                     {/* Card */}
-                    <div className="h-80 mx-4 my-2 group">
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group">
                         <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
@@ -103,7 +103,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <div className="h-80 mx-4 my-2 group">
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group">
                         <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
@@ -125,7 +125,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <div className="h-80 mx-4 my-2 group" onMouseEnter={() => setHover(false)} onMouseLeave={() => setHover(true)}>
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group" onMouseEnter={() => setHover(false)} onMouseLeave={() => setHover(true)}>
                         <Link to="/article">
                         {hover && (
                             <div className="h-4/5">
@@ -146,7 +146,7 @@ const Home = () => {
                         )}
                         </Link>
                     </div>
-                    <div className="h-80 mx-4 my-2 group">
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group">
                         <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
@@ -167,7 +167,7 @@ const Home = () => {
                         )} */}
                         </Link>
                     </div>
-                    <div className="h-80 mx-4 my-2 group">
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group">
                         <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
@@ -188,7 +188,7 @@ const Home = () => {
                         )} */}
                         </Link>
                     </div>
-                    <div className="h-80 mx-4 my-2 group">
+                    <div className="h-80 mx-4 mt-20 lg:my-2 group">
                         <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
@@ -211,7 +211,7 @@ const Home = () => {
                     </div>
                 </div>
                 </div>
-                <div className="w-32">
+                <div className="invisible lg:visible w-0 lg:w-32">
                     <a href="#">
                         <img src="assets/arrow_right.png"  className="w-8 h-16 mx-8 mt-64" alt="arrow_right"/>
                     </a>
@@ -229,11 +229,11 @@ const Home = () => {
                 </div>
             </div>
             {/* Clients */}
-            <div className="pt-5 pb-16 text-center mt-1">
+            <div className="pt-5 pb-16 text-center max-w-full">
                 <div>
                     <p className="font-bold text-xl">Clients</p>
                 </div>
-                <div className="mt-10 flex items-center">
+                <div className="pt-10 pb-10 flex items-center overflow-auto ">
                     <span className="mx-9">
                         <img src="assets/client1.png"  className="w-32 h-18 mx-8" alt="client1"/>
                     </span>
@@ -255,9 +255,9 @@ const Home = () => {
                 </div>
             </div>
             {/* Social Media */}
-            <div className="pt-2 pb-10">
+            <div className="pb-10">
                 {/* Content */}
-                <div className="mx-28 grid grid-cols-3">
+                <div className="mx-5 lg:mx-28 lg:grid lg:grid-cols-3">
                     {/* Card */}
                     <div className="" style={{height:"700px"}}>
                         <img src="assets/facebook.png"  className="w-96 h-full" alt="facebook"/>
@@ -275,44 +275,44 @@ const Home = () => {
             </div>
 
             {/* Footer */}
-            <div className="bg-gray-300 p-20 grid grid-cols-5">
-                <div className="mx-6">
-                    <p className="text-gray-700 font-bold text-xs mb-3">ABOUT</p>
-                    <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Home</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">About Us</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Contact</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Social Media</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">BLog</p></a>
-                </div>
-                <div className="mx-6">
-                    <p className="text-gray-700 font-bold text-xs mb-3">WORKS</p>
-                    <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Forest Solutions</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Soy Scorecards</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Palm Oil Scorecards</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">School Of Fist</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">RSPO</p></a>
-                </div>
-                <div className="mx-6"> 
-                    <p className="text-gray-700 font-bold text-xs mb-3">CLIENTS</p>
-                    <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">WWF International</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">RSPO</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Lorem Ipsum</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Dolor Si</p></a>
-                    <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Amet</p></a>
-                </div>
-                <div className="col-span-2 mx-6">
-                <p className="text-gray-700 font-bold text-xs mb-3">CONTACT US</p>
-                <p className="text-gray-500 font-light text-xs mb-3">Ut tristique non elit nec accumsan. Nunc ullamcorper metus at dui luctus non cursus odio scelerquise. Nulla imperdiet variusarcu quis faucibus. Sed at consectetur lorem</p>
-                <div>
-                    <input type="text" name="message" className="p-2" placeholder="Message" style={{width:"100%",borderBottom:"1px solid #CCCCCC"}}/>
-                </div>
-                <div>
-                    <input type="text" name="message" className="p-2" placeholder="Your email address" style={{width:"80%"}}/><button className=" text-white" style={{backgroundColor:"black",width:"92px",height:"40px"}}>SUBMIT</button>
-                </div>
-                </div>
+            <div className="bg-gray-300 p-7 lg:p-20 lg:grid lg:grid-cols-5">
+                    <div className="mx-6">
+                        <p className="text-gray-700 font-bold text-xs mb-3">ABOUT</p>
+                        <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Home</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">About Us</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Contact</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Social Media</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">BLog</p></a>
+                    </div>
+                    <div className="mx-6">
+                        <p className="text-gray-700 font-bold text-xs mb-3">WORKS</p>
+                        <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Forest Solutions</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Soy Scorecards</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Palm Oil Scorecards</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">School Of Fist</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">RSPO</p></a>
+                    </div>
+                    <div className="mx-6"> 
+                        <p className="text-gray-700 font-bold text-xs mb-3">CLIENTS</p>
+                        <hr style={{borderColor:"#BBBBBB"}} className="mb-2"/>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">WWF International</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">RSPO</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Lorem Ipsum</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Dolor Si</p></a>
+                        <a href="#"><p className="text-gray-500 font-light text-xs mb-3">Amet</p></a>
+                    </div>
+                    <div className="col-span-2 mx-6">
+                    <p className="text-gray-700 font-bold text-xs mb-3">CONTACT US</p>
+                    <p className="text-gray-500 font-light text-xs mb-3">Ut tristique non elit nec accumsan. Nunc ullamcorper metus at dui luctus non cursus odio scelerquise. Nulla imperdiet variusarcu quis faucibus. Sed at consectetur lorem</p>
+                    <div>
+                        <input type="text" name="message" className="p-2" placeholder="Message" style={{width:"100%",borderBottom:"1px solid #CCCCCC"}}/>
+                    </div>
+                    <div>
+                        <input type="text" name="message" className="p-2" placeholder="Your email address" style={{width:"80%"}}/><button className=" text-white text-xs lg:text-sm p-3" style={{backgroundColor:"black",width:"20%"}}>SUBMIT</button>
+                    </div>
+                    </div>
             </div>
         </div>
     );
