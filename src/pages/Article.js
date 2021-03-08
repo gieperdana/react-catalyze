@@ -68,9 +68,9 @@ const Article = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident
                 </p>
 
-                {/* Line */}
+                {/* Quotes */}
                 <hr className="mt-10"/>
-                <p className="mt-5 text-2xl text-blue-400 text-center mx-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                <p className="mt-5 text-2xl text-blue-400 italic text-center mx-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                 <hr className="mt-5"/>
 
                 {/* Paragraph 3 */}
