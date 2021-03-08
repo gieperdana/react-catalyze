@@ -11,7 +11,9 @@ const Home = () => {
             <div className="flex p-4 border-gray-200 border-b-2">
                 {/* Logo */}
                 <div className="flex-1 text-center">
-                    <img className="object-contain w-40 ml-40" src="assets/logo.png" alt="logo"/>
+                    <Link to="/">
+                        <img className="object-contain w-40 ml-40" src="assets/logo.png" alt="logo"/>
+                    </Link>
                 </div>
                 {/* Menu */}
                 <div className="flex-1 text-center mt-2">
