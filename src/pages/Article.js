@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useState} from 'react';
 import {Header,Footer} from "../component";
+import {useParams} from "react-router-dom";
 const Article = () => {
+    let { id } = useParams();
+    const [dataPost, dataPostSet] = useState({})
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    });
     const content = {
         "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-        "subtitle":"Marem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore.",
+        "sub_title":"Marem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore. sed do eiusmod tempor incididunt ut labore.",
         "article_date":"June 2016",
         "pargraph1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident",
         "paragraph2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Excepteur sint occaecat cupidatat non proident",
@@ -21,6 +21,30 @@ const Article = () => {
             "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ."
         }
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        async function getPosts() {
+            try {
+                let response = await fetch('http://localhost:8001/api/posts/'+id)
+                response = await response.json()
+                if(response.status==200){
+                    dataPostSet(response.data)
+                }else{
+                    alert("Data not found now using dummy local data")
+                    dataPostSet(content)
+                }
+            }catch(error){
+                alert("Server not online please online your server, if not you will using dummy local data")
+                dataPostSet(content)
+                console.error(error);
+            }
+          
+        }
+    
+        getPosts()
+    }, [])
+    
     return (
         <div className="min-h-screen">
             {/* Header */}
@@ -32,7 +56,7 @@ const Article = () => {
                 
                 {/* Title */}
                 <p className="text-4xl pt-7 font-bold"> 
-                    {content.title}
+                    {dataPost.title}
                 </p>
 
                 {/* Date */}
@@ -56,7 +80,7 @@ const Article = () => {
 
                 {/* Sub Title */}
                 <p className="text-2xl mt-7 font-semibold"> 
-                    {content.subtitle}
+                    {dataPost.sub_title}
                 </p>
 
                 {/* Heading */}
@@ -66,31 +90,31 @@ const Article = () => {
 
                 {/* Paragraph 1 */}
                 <p className="text-sm mt-2 text-gray-500"> 
-                    {content.pargraph1}
+                    {dataPost.paragraph1}
                 </p>
 
                 {/* image */}
                 <div className="mt-10">
-                    <img src={content.image}  className="object-cover h-96 w-full" alt="screen1"/>
+                    <img src={dataPost.image}  className="object-cover h-96 w-full" alt="screen1"/>
                 </div>
                 {/* Caption Image */}
-                <p><span className="text-gray-500 font-normal text-xs">{content.caption_image}</span></p>
+                <p><span className="text-gray-500 font-normal text-xs">{dataPost.caption_image}</span></p>
 
                 {/* Paragraph 2 */}
 
                 <p className="text-sm mt-10 text-gray-500"> 
-                    {content.paragraph2}
+                    {dataPost.paragraph2}
                 </p>
 
                 {/* Quotes */}
                 <hr className="mt-10"/>
-                <p className="mt-5 text-2xl text-blue-400 italic text-center mx-10">{content.quote}</p>
+                <p className="mt-5 text-2xl text-blue-400 italic text-center mx-10">{dataPost.quote}</p>
                 <hr className="mt-5"/>
 
                 {/* Paragraph 3 */}
 
                 <p className="text-sm mt-10 text-gray-500"> 
-                    {content.paragraph3}
+                    {dataPost.paragraph3}
                 </p>
 
                 {/* Share Icon */}
@@ -99,9 +123,9 @@ const Article = () => {
                         <span className="text-gray-600 font-bold text-xs">SHARE ON</span>
                     </div>
                     <div className="text-center mt-2 flex">
-                        <a href="#"><span><img src="assets/facebook-icon.svg" className="w-6 flex-1 mx-2" alt="facebook"/></span></a>
-                        <a href="#"><span><img src="assets/twitter-icon.svg" className="w-6 flex-1 mx-2" alt="twitter"/></span></a>
-                        <a href="#"><span><img src="assets/google-icon.jpg" className="w-6 flex-1 mx-2" alt="google"/></span></a>
+                        <a href="#"><span><img src="/assets/facebook-icon.svg" className="w-6 flex-1 mx-2" alt="facebook"/></span></a>
+                        <a href="#"><span><img src="/assets/twitter-icon.svg" className="w-6 flex-1 mx-2" alt="twitter"/></span></a>
+                        <a href="#"><span><img src="/assets/google-icon.jpg" className="w-6 flex-1 mx-2" alt="google"/></span></a>
                     </div>
                 </div>
 

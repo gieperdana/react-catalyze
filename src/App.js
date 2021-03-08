@@ -4,20 +4,15 @@ import Article from "./pages/Article";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
     <Switch>
-      <Route path="/article">
-        <Article />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
+      <Route path="/article/:id" component={Article} />
+      <Route path="/" component={Home} />
     </Switch>
     </Router>
   );
