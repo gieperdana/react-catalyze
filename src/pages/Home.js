@@ -51,7 +51,7 @@ const Home = () => {
     useEffect(() => {
         async function getPosts() {
             try {
-                let response = await fetch('http://localhost:8001/api/posts')
+                let response = await fetch('http://localhost:8000/api/posts')
                 response = await response.json()
                 console.log(response)
                 if(response.status==200){
@@ -61,7 +61,7 @@ const Home = () => {
                     dataPostsSet(articles)
                 }
             }catch (error) {
-                alert("Server not online please online your server, if not you will using dummy local data")
+                alert("Server not online please online your server, please make sure server run on http://localhost:8000,if not you will using dummy local data")
                 dataPostsSet(articles)
                 console.error(error);
             }

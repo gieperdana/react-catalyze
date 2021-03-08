@@ -26,7 +26,7 @@ const Article = () => {
         window.scrollTo(0, 0)
         async function getPosts() {
             try {
-                let response = await fetch('http://localhost:8001/api/posts/'+id)
+                let response = await fetch('http://localhost:8000/api/posts/'+id)
                 response = await response.json()
                 if(response.status==200){
                     dataPostSet(response.data)
@@ -35,7 +35,7 @@ const Article = () => {
                     dataPostSet(content)
                 }
             }catch(error){
-                alert("Server not online please online your server, if not you will using dummy local data")
+                alert("Server not online please online your server, please make sure server run on http://localhost:8000, if not you will using dummy local data")
                 dataPostSet(content)
                 console.error(error);
             }
