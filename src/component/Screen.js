@@ -8,7 +8,7 @@ const Screen = () => {
         className="bg-gray-600 md:w-full lg:w-3/5 h-full lg:border-r-2 flex items-end"
         style={{
           backgroundImage:
-            "url('https://i.picsum.photos/id/1073/536/354.jpg?hmac=2TFoFh7Q5tt1soIJWcMPmAzO8253cMKXCXq9M8z202o')",
+            "url('https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')",
         }}
       >
         {/* <img src="https://source.unsplash.com/random"  className="object-cover h-full w-full" alt="screen1"/> */}
@@ -32,7 +32,7 @@ const Screen = () => {
           className="lg:h-1/2 bg-gray-600 flex items-end"
           style={{
             backgroundImage:
-              "url('https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0')",
+              "url('https://images.unsplash.com/photo-1611081154836-4c6351de1819?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')",
           }}
         >
           {/* <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/> */}
@@ -47,7 +47,7 @@ const Screen = () => {
           className="lg:h-1/2 bg-gray-600 border-t-2 flex items-end"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60')",
+              "url('https://images.unsplash.com/photo-1537563626051-5a6859a8d099?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDgyfDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')",
           }}
         >
           {/* <img src="https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"  className="object-cover h-full w-full" alt="screen3"/> */}
