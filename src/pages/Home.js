@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from "react-router-dom";
 
 const Home = () => {
     const [hover, setHover] = useState(true);
@@ -79,6 +80,7 @@ const Home = () => {
                 <div className="grid grid-cols-3">
                     {/* Card */}
                     <div className="h-80 mx-4 my-2 group">
+                        <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -96,9 +98,11 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )} */}
+                        </Link>
                     </div>
 
                     <div className="h-80 mx-4 my-2 group">
+                        <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -116,9 +120,11 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )} */}
+                        </Link>
                     </div>
 
                     <div className="h-80 mx-4 my-2 group" onMouseEnter={() => setHover(false)} onMouseLeave={() => setHover(true)}>
+                        <Link to="/article">
                         {hover && (
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -136,8 +142,10 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )}
+                        </Link>
                     </div>
                     <div className="h-80 mx-4 my-2 group">
+                        <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -155,8 +163,10 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )} */}
+                        </Link>
                     </div>
                     <div className="h-80 mx-4 my-2 group">
+                        <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -174,8 +184,10 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )} */}
+                        </Link>
                     </div>
                     <div className="h-80 mx-4 my-2 group">
+                        <Link to="/article">
                         {/* {hover && ( */}
                             <div className="h-4/5">
                                 <img src="https://picsum.photos/900"  className="object-cover h-full w-full" alt="screen2"/>
@@ -193,6 +205,7 @@ const Home = () => {
                                 <p className="text-sm text-yellow-600 mt-2">Read more . . .</p>
                             </div>
                         )} */}
+                        </Link>
                     </div>
                 </div>
                 </div>
